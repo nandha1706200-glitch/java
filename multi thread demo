@@ -1,0 +1,25 @@
+class threadone extends Thread 
+ {
+public void run()
+{
+for (int i=1; i<=5; i++)
+{
+System.out.println("thread one:"+i);
+}}}
+class threadtwo extends Thread
+{
+public void run() 
+{
+for(int i=1; i<=5; i++)
+{
+System.out.println("thread two:"+i);
+}}}
+public class multithreadsDemo
+{
+public static void main(String[] args)
+{
+threadone t1= new threadone();
+threadtwo t2= new threadtwo();
+t1.start();
+t2.start();
+}}
